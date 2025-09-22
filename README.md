@@ -34,9 +34,12 @@ content=''' <html>
         <br>
         <br>
     </head>
+    <style>
+      table { border-collapse : collapse; font-family:Arial, Helvetica, sans-serif; background-color:rgb( 161, 225, 253); padding: 20px ; table-layout: auto ; width:1000; }
+    </style>
     <body>
         <table>
-            <tr>
+            <tr style="background-color : darkgreen;">
                 <th></th>
                 <th> LAYER</th>
                 <th> </th>
@@ -90,12 +93,9 @@ httpd.serve_forever()
         
 
 # OUTPUT:
+<img width="1920" height="1080" alt="Screenshot (27)" src="https://github.com/user-attachments/assets/2b1fdcfe-f33e-45ef-8517-5c597ee40e90" />
 
-![alt text](<Screenshot (21).png>)
-
-![alt text](<Screenshot (22).png>)
-
-
+<img width="1920" height="1080" alt="Screenshot (28)" src="https://github.com/user-attachments/assets/4701f822-a4dd-4050-85d4-375441646200" />
 
 # RESULT:
 The program for implementing simple webserver is executed successfully.
