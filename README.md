@@ -21,25 +21,29 @@ Serving the HTML pages.
 Testing the webserver.
 
 # PROGRAM:
+
 ```
-from http.server import HTTPServer,BaseHTTPRequestHandler
-content=''' <html>
+from http.server import HTTPServer, BaseHTTPRequestHandler
+content= '''
+<html>
     <head>
         <title>
             TCP / IP PROTOCOLS 
         </title>
-        <h1 align="center">TCP / IP PROTOCOLS </h1>
+        <h1>TCP / IP PROTOCOLS </h1>
         <h3> REGISTER NUMBER = 25018004</h3>
         <h3> NAME            = TEJA D P</h3>
         <br>
         <br>
     </head>
     <style>
-      table { border-collapse : collapse; font-family:Arial, Helvetica, sans-serif; background-color:rgb( 161, 225, 253); padding: 20px ; table-layout: auto ; width:1000; }
+    h1{ text-align: center; -webkit-text-fill-color: blueviolet;}
+      table { width: 100%; height: 75%; background-color: antiquewhite; border-top-color: collapse;}
+      td{ background-color: blue ; -webkit-text-fill-color: aquamarine; border: 1px solid skyblue;}
     </style>
     <body>
         <table>
-            <tr style="background-color : darkgreen;">
+            <tr style="background-color :goldenrod">
                 <th></th>
                 <th> LAYER</th>
                 <th> </th>
@@ -77,25 +81,26 @@ content=''' <html>
             </tr> 
               </table>
     </body>
-</html>'''
-class MyServer(BaseHTTPRequestHandler):
-    def do_GET(self):
-        print("Get request received...")
+</html>
+
+'''
+class MyServer ( BaseHTTPRequestHandler):
+    def do_GET (self):
+        print(" Get request recived...")
         self.send_response(200)
         self.send_header("content-type","text/html")
         self.end_headers()
         self.wfile.write(content.encode())
-print("This is my webserver") 
+print(" This is my webserver")
 server_address=('',8000)
-httpd = HTTPServer(server_address,MyServer)
+httpd = HTTPServer(server_address, MyServer)
 httpd.serve_forever()
 ```
-        
 
 # OUTPUT:
-<img width="1920" height="1080" alt="Screenshot (27)" src="https://github.com/user-attachments/assets/2b1fdcfe-f33e-45ef-8517-5c597ee40e90" />
+<img width="1920" height="1080" alt="Screenshot (50)" src="https://github.com/user-attachments/assets/50f8d560-6522-4184-bcea-fc9bb70a926e" />
+<img width="1920" height="1080" alt="Screenshot (51)" src="https://github.com/user-attachments/assets/4c9c300d-e678-4a97-b7e9-62f81096ba53" />
 
-<img width="1920" height="1080" alt="Screenshot (28)" src="https://github.com/user-attachments/assets/4701f822-a4dd-4050-85d4-375441646200" />
 
 # RESULT:
 The program for implementing simple webserver is executed successfully.
